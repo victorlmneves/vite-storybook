@@ -1,7 +1,5 @@
 import MyButton from './Button.vue';
 
-console.log('env values with import.meta', import.meta)
-
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
@@ -33,7 +31,7 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: import.meta.env.VITE_API_ENDPOINT,
 };
 
 export const Secondary = Template.bind({});
